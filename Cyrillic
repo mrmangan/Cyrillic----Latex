@@ -1,0 +1,93 @@
+%!TEX TS-program = xelatex
+
+\documentclass[12pt]{article}
+
+
+\usepackage{newunicodechar}
+\usepackage{fontspec}
+\usepackage{float}
+% make new environment
+\usepackage[OT2,OT1]{fontenc}
+\newcommand\cyr
+{\renewcommand
+	\rmdefault{wncyr}
+	\renewcommand
+	\sfdefault{wncyss}
+	\renewcommand
+	\encodingdefault{OT2}
+	\normalfont
+	\selectfont
+}
+\DeclareTextFontCommand{\textcyr}{\cyr}
+
+\begin{document}
+	
+		\section{Slavic Cyrillic Letters}
+	Use these packages and make new environment listed above. 
+	
+
+	Demonstrate letters to use in text: 
+	
+	$\textnormal{\cyr{m}}$
+	{\cyr{a}}
+	{\cyr{b}}
+	{\cyr{c}}
+	{\cyr{d}}
+	{\cyr{e}}
+	{\cyr{f}}
+	{\cyr{g}}	
+	{\cyr{h}}
+	{\cyr{i}}
+	{\cyr{j}}
+	{\cyr{k}}
+	{\cyr{l}}
+	{\cyr{m}}
+	{\cyr{n}}
+	{\cyr{o}}
+	{\cyr{p}}
+	{\cyr{q}}
+	{\cyr{r}}
+	{\cyr{s}}
+	{\cyr{t}}
+	{\cyr{u}}
+	{\cyr{v}}
+	{\cyr{w}}
+	{\cyr{x}}
+	{\cyr{y}}
+	{\cyr{z}}
+	
+	
+	Here is an example of how to insert a Burmese letter {\cyr{m}} in the middle of English text.
+	
+
+	
+	Use in an equation: 
+	\begin{equation}
+	\label{eq13}
+	A= \textnormal{\cyr{m}} \times b + \textnormal{\cyr{b}}
+	\end{equation}
+	
+	Use in a table: 
+	
+	\begin{table}[H]
+		\caption{Test Cyrillic in table.}
+		\label{tab:1}       
+		\begin{tabular}{lllllll}
+			\hline\noalign{\smallskip}
+			&{\cyr{m}} & {\cyr{b}}
+			& $\mu$ & $\beta$ & m & b \\
+			\noalign{\smallskip}\hline\noalign{\smallskip}
+			VACE & -0.11 & 1.1 & 0 & 2.05 & 124.64 & -1.61 \\
+			EBLE & 0 & 0.98 & 0 & 0.02 & 105.06 & -7.57 \\
+			\noalign{\smallskip}\hline
+		\end{tabular}
+	\end{table}
+
+\noindent Other sources for Cyrillic in Latex: 
+
+1. https://www.overleaf.com/learn/latex/Russian 
+
+2. https://www.latex-project.org/help/documentation/cyrguide.pdf
+
+\end{document}
+	
